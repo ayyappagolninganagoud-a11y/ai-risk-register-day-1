@@ -1,7 +1,8 @@
-package com.campuspo.ai_risk_register;
+package com.campuspe.ai_risk.register;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication(
 		exclude = {org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.class}
