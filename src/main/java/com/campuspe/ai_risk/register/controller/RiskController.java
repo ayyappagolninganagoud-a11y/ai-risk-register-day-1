@@ -5,6 +5,7 @@ import com.campuspe.ai_risk.register.service.RiskService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import com.campuspe.ai_risk.register.service.EmailService;
 
 import java.util.List;
 
@@ -14,6 +15,9 @@ public class RiskController {
 
     @Autowired
     private RiskService riskService;
+
+    @Autowired
+    private EmailService emailService;
 
     @PostMapping
     public Risk addRisk(@RequestBody Risk risk) {
