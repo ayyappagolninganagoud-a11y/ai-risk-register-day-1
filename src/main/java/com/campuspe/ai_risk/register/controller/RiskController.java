@@ -22,6 +22,7 @@ public class RiskController {
 
     @GetMapping("/all")
     public List<Risk> getAllRisks(@RequestParam int page, @RequestParam int size) {
+        System.out.println("Controller /risks/all called");
         return riskService.getAllRisks(page, size);
     }
 

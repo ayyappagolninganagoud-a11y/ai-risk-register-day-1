@@ -1,39 +1,48 @@
 package com.campuspe.ai_risk.register;
 
-import jakarta.persistence.*;
-import org.springframework.data.annotation.CreatedDate;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import jakarta.validation.constraints.NotBlank;
+import java.io.Serializable;
 
-import java.time.LocalDateTime;
+public class Risk implements Serializable {
 
-@Entity
-@EntityListeners(AuditingEntityListener.class)
-@Getter
-@Setter
-public class Risk {
+    private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank(message = "Risk name is required")
-    @Column(nullable = false)
     private String riskName;
-
-    @Column
     private String description;
-
-    @Column
     private String severity;
 
-    @CreatedDate
-    @Column(updatable = false)
-    private LocalDateTime createdAt;
+    public Risk() {
+    }
 
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getRiskName() {
+        return riskName;
+    }
+
+    public void setRiskName(String riskName) {
+        this.riskName = riskName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getSeverity() {
+        return severity;
+    }
+
+    public void setSeverity(String severity) {
+        this.severity = severity;
+    }
 }
