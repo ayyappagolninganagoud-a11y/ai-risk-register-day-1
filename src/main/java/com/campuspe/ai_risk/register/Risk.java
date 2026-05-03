@@ -14,6 +14,13 @@ public class Risk implements Serializable {
     public Risk() {
     }
 
+    public Risk(Long id, String riskName, String description, String severity) {
+        this.id = id;
+        this.riskName = riskName;
+        this.description = description;
+        this.severity = severity;
+    }
+
     public Long getId() {
         return id;
     }
