@@ -1,5 +1,5 @@
 ## Submission Branch
-Ningannagouda-week1-day1-16
+Ningannagouda-day1-16
 
 ### Day 1 - Project Setup
 - Created Spring Boot project
